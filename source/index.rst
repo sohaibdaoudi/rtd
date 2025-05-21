@@ -47,20 +47,6 @@ Our project includes several Jupyter notebooks that demonstrate various aspects 
    * - *Cars_Energy_dispo-DeepLearning.ipynb*
      - RNN models for V2G energy availability prediction
 
-📋 Quick Links
----------------
-- `Overview <#overview>`_
-- `V2G Technology Explained <#v2g-explained>`_
-- `Key Features <#key-features>`_
-- `Notebooks Overview <#notebooks-overview>`_
-- `Streamlit App Components <#streamlit-app-components>`_
-- `Technology Stack <#technology-stack>`_
-- `Simulation Details <#simulation-details>`_
-- `Repository Structure <#repository-structure>`_
-- `Installation & Usage <#running-the-application>`_
-- `Acknowledgements <#acknowledgements>`_
-- `License <#license-section>`_
-- `Contact <#contact>`_
 
 .. _overview:
 
@@ -277,8 +263,10 @@ Installation Steps
 
    .. code-block:: bash
 
-      git clone https://github.com/yourusername/Intelligent-Energy-Management-System-with-V2G-Technology.git
+      git clone --depth 1 --filter=blob:none --sparse https://github.com/MarouaneMajidi/Intelligent-Energy-Management-System-with-V2G-Technology.git
       cd Intelligent-Energy-Management-System-with-V2G-Technology
+      git sparse-checkout init --cone
+      git sparse-checkout set App_version_one
 
 2. *Set up a Python virtual environment:*
 

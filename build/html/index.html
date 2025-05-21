@@ -376,8 +376,10 @@ This application currently uses first-version models trained on limited data wit
 <h3>Installation Steps<a class="headerlink" href="#installation-steps" title="Link to this heading"></a></h3>
 <ol class="arabic">
 <li><p><em>Clone the repository:</em></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/Intelligent-Energy-Management-System-with-V2G-Technology.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--filter<span class="o">=</span>blob:none<span class="w"> </span>--sparse<span class="w"> </span>https://github.com/MarouaneMajidi/Intelligent-Energy-Management-System-with-V2G-Technology.git
 <span class="nb">cd</span><span class="w"> </span>Intelligent-Energy-Management-System-with-V2G-Technology
+git<span class="w"> </span>sparse-checkout<span class="w"> </span>init<span class="w"> </span>--cone
+git<span class="w"> </span>sparse-checkout<span class="w"> </span><span class="nb">set</span><span class="w"> </span>App_version_one
 </pre></div>
 </div>
 </li>
