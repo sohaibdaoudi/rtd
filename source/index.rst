@@ -48,7 +48,6 @@ Our project includes several Jupyter notebooks that demonstrate various aspects 
      - RNN models for V2G energy availability prediction
 
 
-.. _overview:
 
 Overview
 --------
@@ -57,7 +56,7 @@ This project presents an intelligent energy management system that leverages Veh
 
 The system integrates real-world solar irradiance data from Meknès, Morocco, along with residential load profiles representative of Moroccan consumption patterns. Our Streamlit application delivers weekly forecasts and cost-optimization recommendations based on comprehensive time series analysis.
 
-.. _v2g-explained:
+
 
 V2G Explained
 -------------
@@ -70,7 +69,7 @@ Vehicle-to-Grid (V2G) is a cutting-edge technology enabling bidirectional energy
 .. image:: https://github.com/user-attachments/assets/f0aac5e9-e10b-41d8-8296-e3e35398dc79
    :alt: V2G Technology Diagram
 
-.. _streamlit-app-components:
+
 
 Streamlit App Components
 ------------------------
@@ -128,7 +127,6 @@ V2G technology offers multiple benefits across the energy ecosystem:
 
 Our project specifically focuses on cost optimization by determining when V2G utilization is more economical than alternative generation sources.
 
-.. _key-features:
 
 Key Features
 ------------
@@ -144,7 +142,6 @@ Key Features
   - Actionable recommendations for energy management
 - *Comprehensive Analytics:* Data visualization and insights on load patterns, solar production, and V2G availability
 
-.. _technology-stack:
 
 Technology Stack
 ----------------
@@ -172,7 +169,6 @@ Data Sources
 - Solar irradiation measurements from Meknès, Morocco
 - Synthetic residential load profiles based on Moroccan consumption patterns
 
-.. _repository-structure:
 
 Repository Structure
 --------------------
@@ -221,7 +217,6 @@ Repository Structure
    ├── README.md                              # Project documentation (this file's source)
    └── LICENSE.txt                            # MIT License
 
-.. _simulation-details:
 
 Simulation Details
 ------------------
@@ -247,7 +242,6 @@ Forecasting Outputs
 - Available V2G Power Capacity (kW)
 - Cost Optimization Metrics (MAD/kWh)
 
-.. _running-the-application:
 
 Running the Application
 -----------------------
@@ -270,10 +264,43 @@ Installation Steps
 
 2. *Set up a Python virtual environment:*
 
-   .. code-block:: bash
+   * **Using `venv` (Python's built-in)**:
 
-      python3 -m venv venv
-      source venv/bin/activate  # On Windows: venv\Scripts\activate
+  
+     .. code-block:: bash
+
+       python3 -m venv venv
+
+     Activate the environment:
+
+     * On Windows:
+
+       .. code-block:: bash
+
+         venv\Scripts\activate
+
+     * On macOS/Linux:
+
+
+       .. code-block:: bash
+
+         source venv/bin/activate
+
+   * **Using `conda` (Anaconda/Miniconda)**:
+     Replace `myenv` with your desired environment name and your preferred compatible version of python (3.1X).
+
+
+     .. code-block:: bash
+     
+
+       conda create --name myenv python
+
+     Activate the Conda environment:
+
+     .. code-block:: bash
+     
+
+       conda activate myenv
 
 3. *Install Streamlit app dependencies:*
 
@@ -291,7 +318,6 @@ Installation Steps
 5. *Access the application:*
    Open your browser and navigate to http://localhost:8501
 
-.. _acknowledgements:
 
 Acknowledgements
 ----------------
@@ -302,19 +328,16 @@ We also acknowledge the following resources that contributed to this project:
 - Streamlit documentation for web application development
 - Various academic papers on V2G optimization techniques
 
-.. _license-section:
+
 
 License
 -------
 This project is licensed under the `MIT License <./LICENSE.txt>`_ - see the LICENSE.txt file for details.
 
-.. _contact:
 
 Contact
 -------
 
-Project Maintainers
-~~~~~~~~~~~~~~~~~~~
 - *Sohaib Daoudi*
   - Email: `soh.daoudi@gmail.com <mailto:soh.daoudi@gmail.com>`_
   - GitHub: `@sohaibdaoudi <https://github.com/sohaibdaoudi>`_
