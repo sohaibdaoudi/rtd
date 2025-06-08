@@ -19,8 +19,8 @@ sphinx:
     configuration: source/conf.py
 
 # Explicitly tell Read the Docs to build a PDF
-formats:
-  - pdf
+#formats:
+ # - pdf
 
 # Install your project's dependencies
 python:
