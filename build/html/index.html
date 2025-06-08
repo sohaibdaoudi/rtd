@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🔋⚡ Intelligent Energy Management System with V2G Technology &mdash; TimeSeriesProject  documentation</title>
+  <title>Intelligent Energy Management System with V2G Technology &mdash; TimeSeriesProject  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -16,6 +16,7 @@
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -42,43 +43,67 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">🔋⚡ Intelligent Energy Management System with V2G Technology</a><ul>
-<li><a class="reference internal" href="#project-status-under-active-development">🚧 Project Status: Under Active Development 🚧</a></li>
-<li><a class="reference internal" href="#notebooks-overview">Notebooks Overview</a></li>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#v2g-explained">V2G Explained</a><ul>
-<li><a class="reference internal" href="#what-is-vehicle-to-grid-v2g">What is Vehicle-to-Grid (V2G)?</a></li>
+<li><a class="reference internal" href="#">Intelligent Energy Management System with V2G Technology</a></li>
+<li><a class="reference internal" href="#i-introduction">I. Introduction</a><ul>
+<li><a class="reference internal" href="#v2g-vehicle-to-grid">V2G: Vehicle-to-Grid</a></li>
+<li><a class="reference internal" href="#project-overview">Project Overview</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#streamlit-app-components">Streamlit App Components</a><ul>
-<li><a class="reference internal" href="#key-app-modules">Key App Modules</a></li>
-<li><a class="reference internal" href="#app-features">App Features</a></li>
-<li><a class="reference internal" href="#v2g-use-cases">V2G Use Cases</a></li>
+<li><a class="reference internal" href="#ii-team">II. Team</a><ul>
+<li><a class="reference internal" href="#supervisor">Supervisor</a></li>
+<li><a class="reference internal" href="#members">Members</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#key-features">Key Features</a></li>
-<li><a class="reference internal" href="#technology-stack">Technology Stack</a><ul>
-<li><a class="reference internal" href="#deep-learning-models">Deep Learning Models</a></li>
-<li><a class="reference internal" href="#data-processing-analysis">Data Processing &amp; Analysis</a></li>
-<li><a class="reference internal" href="#web-application">Web Application</a></li>
-<li><a class="reference internal" href="#data-sources">Data Sources</a></li>
+<li><a class="reference internal" href="#iii-data-collection">III. Data Collection</a><ul>
+<li><a class="reference internal" href="#matlab-simulation">1. MATLAB Simulation</a><ul>
+<li><a class="reference internal" href="#input-data">Input Data</a></li>
+<li><a class="reference internal" href="#output-data">Output Data</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#repository-structure">Repository Structure</a></li>
-<li><a class="reference internal" href="#simulation-details">Simulation Details</a><ul>
-<li><a class="reference internal" href="#key-components">Key Components</a></li>
-<li><a class="reference internal" href="#data-inputs">Data Inputs</a></li>
-<li><a class="reference internal" href="#forecasting-outputs">Forecasting Outputs</a></li>
+<li><a class="reference internal" href="#other-data">2. Other Data</a></li>
+<li><a class="reference internal" href="#conclusion">3. Conclusion</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#running-the-application">Running the Application</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#installation-steps">Installation Steps</a></li>
+<li><a class="reference internal" href="#iv-training-models">IV. Training Models</a><ul>
+<li><a class="reference internal" href="#data-preparation">1. Data Preparation</a></li>
+<li><a class="reference internal" href="#statistical-approach">2. Statistical Approach</a><ul>
+<li><a class="reference internal" href="#stationarity-analysis">2.1. Stationarity Analysis</a><ul>
+<li><a class="reference internal" href="#visual-inspection">2.1.1. Visual Inspection</a></li>
+<li><a class="reference internal" href="#augmented-dickey-fuller-test">2.1.2. Augmented Dickey-Fuller Test</a></li>
+<li><a class="reference internal" href="#kwiatkowski-phillips-schmidt-shin-kpss-test">2.1.3. Kwiatkowski-Phillips-Schmidt-Shin (KPSS) Test</a></li>
+<li><a class="reference internal" href="#phillips-perron-pp-test">2.1.4. Phillips-Perron (PP) Test</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
-<li><a class="reference internal" href="#license">License</a></li>
-<li><a class="reference internal" href="#contact">Contact</a></li>
+<li><a class="reference internal" href="#differencing">2.2. Differencing</a></li>
+<li><a class="reference internal" href="#sarima-model">2.3. SARIMA Model</a><ul>
+<li><a class="reference internal" href="#initial-parameter-selection">2.3.1. Initial Parameter Selection</a></li>
+<li><a class="reference internal" href="#hyperparameter-tuning">2.3.2. Hyperparameter Tuning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prophet-model">2.4. Prophet Model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deep-learning-approach">3. Deep Learning Approach</a><ul>
+<li><a class="reference internal" href="#id3">3.1. Data Preparation</a></li>
+<li><a class="reference internal" href="#models">3.2. Models</a></li>
+<li><a class="reference internal" href="#model-evaluation">3.3. Model Evaluation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-optimisation">V. Optimisation</a><ul>
+<li><a class="reference internal" href="#optimization-problem-formulation">1. Optimization Problem Formulation</a></li>
+<li><a class="reference internal" href="#from-forecasting-to-optimization">2. From forecasting to optimization</a><ul>
+<li><a class="reference internal" href="#from-diesel-price-to-cost-energy">2.1. From diesel price to cost energy</a></li>
+<li><a class="reference internal" href="#from-weekly-to-hourly-diesel-energy-cost">2.2. From weekly to hourly diesel energy cost</a></li>
+<li><a class="reference internal" href="#example-of-optimization">2.3. Example of optimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vi-dashboard-with-streamlit">VI. Dashboard with Streamlit</a><ul>
+<li><a class="reference internal" href="#main-workflow">Main Workflow</a></li>
+<li><a class="reference internal" href="#additional-features">Additional Features</a></li>
 </ul>
 </li>
 </ul>
@@ -97,7 +122,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">🔋⚡ Intelligent Energy Management System with V2G Technology</li>
+      <li class="breadcrumb-item active">Intelligent Energy Management System with V2G Technology</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -108,351 +133,699 @@
            <div itemprop="articleBody">
              
   <section id="intelligent-energy-management-system-with-v2g-technology">
-<span id="timeseriesproject-documentation"></span><h1>🔋⚡ Intelligent Energy Management System with V2G Technology<a class="headerlink" href="#intelligent-energy-management-system-with-v2g-technology" title="Link to this heading"></a></h1>
-<a class="reference external image-reference" href="./LICENSE.txt"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+<h1>Intelligent Energy Management System with V2G Technology<a class="headerlink" href="#intelligent-energy-management-system-with-v2g-technology" title="Link to this heading"></a></h1>
+</section>
+<section id="i-introduction">
+<h1>I. Introduction<a class="headerlink" href="#i-introduction" title="Link to this heading"></a></h1>
+<section id="v2g-vehicle-to-grid">
+<h2>V2G: Vehicle-to-Grid<a class="headerlink" href="#v2g-vehicle-to-grid" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="_images/V2G-working.jpg"><img alt="V2G concept" class="align-center" src="_images/V2G-working.jpg" style="width: 90%;" />
 </a>
-<a class="reference external image-reference" href="https://www.python.org/downloads/"><img alt="Python Version" src="https://img.shields.io/badge/python-3.x-blue.svg" />
+<p><strong>Vehicle-to-Grid (V2G)</strong> is an innovative technology that enables two-way energy flow between electric vehicles (EVs) and the power grid. Unlike traditional EV charging, V2G allows EVs not only to charge from the grid but also to return stored energy when needed. This capability supports <strong>grid stability</strong>, <strong>reduces peak demand</strong>, and enhances the <strong>integration of renewable energy sources</strong>.</p>
+<p>V2G is already being deployed in several countries, including <strong>Japan</strong>, <strong>the United States</strong>, <strong>the United Kingdom</strong>, and <strong>the Netherlands</strong>, where it helps balance the power grid and reduce energy costs. In Japan, for example, V2G plays a key role in disaster recovery strategies by allowing EVs to power homes and essential services during outages.</p>
+<p>This growing ecosystem shows how V2G is becoming a central component in modern smart grid and energy management systems.</p>
+</section>
+<section id="project-overview">
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading"></a></h2>
+<p>This project introduces an intelligent energy management system that leverages Vehicle-to-Grid (V2G) technology to optimize electricity production costs. The system predicts electricity load and the availability of other energy sources to determine the best times to utilize V2G energy, thereby maximizing efficiency and minimizing overall energy costs.</p>
+</section>
+</section>
+<section id="ii-team">
+<h1>II. Team<a class="headerlink" href="#ii-team" title="Link to this heading"></a></h1>
+<section id="supervisor">
+<h2>Supervisor<a class="headerlink" href="#supervisor" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Masrour Tawfik</strong>
+<a class="reference external" href="https://www.linkedin.com/in/tawfik-masrour-43163b85/">LinkedIn</a></p></li>
+</ul>
+</section>
+<section id="members">
+<h2>Members<a class="headerlink" href="#members" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Marouane Majidi</strong>
+<a class="reference external" href="https://www.linkedin.com/in/marouane-majidi-73abb81ab/">LinkedIn</a></p></li>
+<li><p><strong>Sohaib Daoudi</strong>
+<a class="reference external" href="https://www.linkedin.com/in/sohaib-daoudi-61215426a/">LinkedIn</a></p></li>
+</ul>
+</section>
+</section>
+<section id="iii-data-collection">
+<h1>III. Data Collection<a class="headerlink" href="#iii-data-collection" title="Link to this heading"></a></h1>
+<section id="matlab-simulation">
+<h2>1. MATLAB Simulation<a class="headerlink" href="#matlab-simulation" title="Link to this heading"></a></h2>
+<p>We implemented a custom <strong>Vehicle-to-Grid (V2G)</strong> simulation in <strong>MATLAB Simulink</strong>, inspired by the official example from MathWorks:
+<a class="reference external" href="https://www.mathworks.com/help/sps/ug/24-hour-simulation-of-a-vehicle-to-grid-v2g-system.html">24-Hour Simulation of a V2G System</a>.</p>
+<p>While our simulation is based on this reference, we made several changes and enhancements to better reflect <strong>local conditions</strong>, <strong>vehicle behavior</strong>, and <strong>energy sources</strong> specific to our use case.</p>
+<a class="reference internal image-reference" href="_images/simulation.png"><img alt="Custom V2G Simulation in MATLAB Simulink" class="align-center" src="_images/simulation.png" style="width: 90%;" />
 </a>
-<a class="reference external image-reference" href="https://streamlit.io/"><img alt="Streamlit Version" src="https://img.shields.io/badge/streamlit-1.20%2B-ff69b4.svg" />
-</a>
-<a class="reference external image-reference" href="https://www.mathworks.com/products/matlab.html"><img alt="MATLAB/Simulink" src="https://img.shields.io/badge/MATLAB%2FSimulink-R20XXx-orange.svg" />
-</a>
-<section id="project-status-under-active-development">
-<h2>🚧 Project Status: Under Active Development 🚧<a class="headerlink" href="#project-status-under-active-development" title="Link to this heading"></a></h2>
-<p><strong>Attention:</strong>
-This application currently uses first-version models trained on limited data without standardization. An improved version will be released soon.</p>
-</section>
-<section id="notebooks-overview">
-<h2>Notebooks Overview<a class="headerlink" href="#notebooks-overview" title="Link to this heading"></a></h2>
-<p>Our project includes several Jupyter notebooks that demonstrate various aspects of our data analysis and modeling approach:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 30.0%" />
-<col style="width: 70.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Notebook</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><em>Final_Project_Simulation.ipynb</em></p></td>
-<td><p>Main project simulation and integration of all components</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Load-DeepLearning.ipynb</em></p></td>
-<td><p>Development of RNN models for load forecasting</p></td>
-</tr>
-<tr class="row-even"><td><p><em>Load-StatisticalStudy.ipynb</em></p></td>
-<td><p>Statistical analysis of load patterns and trends</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>SolarEnergy-DeepLearning.ipynb</em></p></td>
-<td><p>BiLSTM models for solar energy production forecasting</p></td>
-</tr>
-<tr class="row-even"><td><p><em>SolarEnergy-StatisticalStudy.ipynb</em></p></td>
-<td><p>Statistical analysis of solar generation data</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Cars_Energy_dispo-DeepLearning.ipynb</em></p></td>
-<td><p>RNN models for V2G energy availability prediction</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>This project presents an intelligent energy management system that leverages Vehicle-to-Grid (V2G) technology to optimize electricity production costs. Using deep learning methods, we forecast key energy components and provide decision support for when to utilize stored energy from Electric Vehicles (EVs) versus supplementing with diesel generation.</p>
-<p>The system integrates real-world solar irradiance data from Meknès, Morocco, along with residential load profiles representative of Moroccan consumption patterns. Our Streamlit application delivers weekly forecasts and cost-optimization recommendations based on comprehensive time series analysis.</p>
-</section>
-<section id="v2g-explained">
-<h2>V2G Explained<a class="headerlink" href="#v2g-explained" title="Link to this heading"></a></h2>
-<section id="what-is-vehicle-to-grid-v2g">
-<h3>What is Vehicle-to-Grid (V2G)?<a class="headerlink" href="#what-is-vehicle-to-grid-v2g" title="Link to this heading"></a></h3>
-<p>Vehicle-to-Grid (V2G) is a cutting-edge technology enabling bidirectional energy flow between electric vehicle batteries and the power grid. Unlike conventional EV charging, V2G allows vehicles to not only consume electricity but also return it to the grid when beneficial.</p>
-<img alt="V2G Technology Diagram" src="https://github.com/user-attachments/assets/f0aac5e9-e10b-41d8-8296-e3e35398dc79" />
-</section>
-</section>
-<section id="streamlit-app-components">
-<h2>Streamlit App Components<a class="headerlink" href="#streamlit-app-components" title="Link to this heading"></a></h2>
-<p>Our interactive web application provides a user-friendly interface for energy management decision support:</p>
-<section id="key-app-modules">
-<h3>Key App Modules<a class="headerlink" href="#key-app-modules" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><em>data_utils.py</em>: Functions for loading and preprocessing time series data</p></li>
-<li><p><em>model_utils.py</em>: Handles model loading and prediction generation</p></li>
-<li><p><em>optimization.py</em>: Implements cost optimization algorithms</p></li>
-<li><p><em>visualization.py</em>: Creates interactive charts and data visualizations</p></li>
-<li><p><em>utils.py</em>: General utility functions used throughout the application</p></li>
-</ul>
-</section>
-<section id="app-features">
-<h3>App Features<a class="headerlink" href="#app-features" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Weekly forecasts for load, solar production, and V2G availability</p></li>
-<li><p>Cost comparison between V2G utilization and diesel generation</p></li>
-<li><p>Interactive visualizations of energy patterns</p></li>
-<li><p>Optimization recommendations for energy sourcing</p></li>
-</ul>
-<p>When connected to a V2G-enabled charging station, the system manages electricity flow through:</p>
-<ol class="arabic simple">
-<li><p><em>Charging Mode:</em> The EV draws power from the grid to charge its battery</p></li>
-<li><p><em>Discharging (V2G) Mode:</em> The EV feeds stored energy back to the grid when:
-- Grid demand peaks
-- Energy prices are high
-- Renewable energy generation is low</p></li>
-</ol>
-<p>This process is coordinated through sophisticated control systems with EV owner consent, typically including financial incentives for participation.</p>
-</section>
-<section id="v2g-use-cases">
-<h3>V2G Use Cases<a class="headerlink" href="#v2g-use-cases" title="Link to this heading"></a></h3>
-<p>V2G technology offers multiple benefits across the energy ecosystem:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 30.0%" />
-<col style="width: 70.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Use Case</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><em>Peak Shaving</em></p></td>
-<td><p>Reduces grid strain during high-demand periods by supplying stored EV energy</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Grid Stabilization</em></p></td>
-<td><p>Provides ancillary services like frequency regulation and voltage support</p></td>
-</tr>
-<tr class="row-even"><td><p><em>Renewable Integration</em></p></td>
-<td><p>Stores surplus renewable energy for use when generation is insufficient</p></td>
-</tr>
-<tr class="row-odd"><td><p><em>Emergency Backup</em></p></td>
-<td><p>Offers potential backup power during outages</p></td>
-</tr>
-<tr class="row-even"><td><p><em>Economic Optimization</em></p></td>
-<td><p>Creates revenue opportunities for EV owners through energy arbitrage</p></td>
-</tr>
-</tbody>
-</table>
-<p>Our project specifically focuses on cost optimization by determining when V2G utilization is more economical than alternative generation sources.</p>
-</section>
-</section>
-<section id="key-features">
-<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><em>Advanced Time Series Forecasting:</em> Deep learning models (RNN, BiLSTM, GRU) for accurate prediction of energy components</p></li>
-<li><p><em>Localized Data Integration:</em>
-- Actual solar irradiation data from Meknès, Morocco
-- Realistic residential load profiles mirroring Moroccan consumption patterns</p></li>
-<li><p><em>Cost Optimization Engine:</em> Algorithms to determine optimal energy sourcing strategies</p></li>
-<li><p><em>Interactive Decision Support:</em> Streamlit application providing:
-- Weekly energy forecasts
-- Cost-comparison between V2G and diesel generation
-- Actionable recommendations for energy management</p></li>
-<li><p><em>Comprehensive Analytics:</em> Data visualization and insights on load patterns, solar production, and V2G availability</p></li>
-</ul>
-</section>
-<section id="technology-stack">
-<h2>Technology Stack<a class="headerlink" href="#technology-stack" title="Link to this heading"></a></h2>
-<section id="deep-learning-models">
-<h3>Deep Learning Models<a class="headerlink" href="#deep-learning-models" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>TensorFlow/Keras</p></li>
-<li><p>Recurrent Neural Networks (RNN)</p></li>
-<li><p>Bidirectional LSTM (BiLSTM)</p></li>
-<li><p>Gated Recurrent Units (GRU)</p></li>
-</ul>
-</section>
-<section id="data-processing-analysis">
-<h3>Data Processing &amp; Analysis<a class="headerlink" href="#data-processing-analysis" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Python 3.x</p></li>
-<li><p>Pandas</p></li>
-<li><p>NumPy</p></li>
-<li><p>Scikit-learn</p></li>
-</ul>
-</section>
-<section id="web-application">
-<h3>Web Application<a class="headerlink" href="#web-application" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Streamlit</p></li>
-</ul>
-</section>
-<section id="data-sources">
-<h3>Data Sources<a class="headerlink" href="#data-sources" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Solar irradiation measurements from Meknès, Morocco</p></li>
-<li><p>Synthetic residential load profiles based on Moroccan consumption patterns</p></li>
-</ul>
-</section>
-</section>
-<section id="repository-structure">
-<h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Link to this heading"></a></h2>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Intelligent-Energy-Management-System-with-V2G-Technology/
-├── Notebooks/                             # Jupyter notebooks for data analysis
-│   ├── Cars_Energy_dispo-DeepLearning.ipynb     # V2G energy availability modeling
-│   ├── Final_Project_Simulation.ipynb           # Complete project simulation
-│   ├── Load-DeepLearning.ipynb                  # Load forecasting with deep learning
-│   ├── Load-StatisticalStudy.ipynb              # Statistical analysis of load data
-│   ├── SolarEnergy-DeepLearning.ipynb           # Solar energy prediction models
-│   └── SolarEnergy-StatisticalStudy.ipynb       # Statistical analysis of solar data
-│
-├── Best Models/                           # Optimized predictive models
-│   ├── best_model_BILSTM_SolarEnergy.h5       # BiLSTM model for solar prediction
-│   ├── best_model_RNN_LOAD.h5                 # RNN model for load forecasting
-│   └── RNN_CarsEnergy_v2g.h5                  # RNN model for V2G availability
-│
-├── Datasets/                              # Raw and processed datasets
-│   ├── Solar_energy_cleaned.csv             # Processed solar energy data
-│   ├── Total_Load.csv                       # Load profile dataset
-│   └── total_power_EV_disponible.xlsx       # Available EV power data
-│
-├── App_version_one/                       # Streamlit application
-│   ├── app.py                             # Main application entry point
-│   ├── data_utils.py                      # Data processing utilities
-│   ├── model_utils.py                     # Model loading and prediction functions
-│   ├── optimization.py                    # Cost optimization algorithms
-│   ├── utils.py                           # General utility functions
-│   ├── visualization.py                   # Data visualization components
-│   ├── style.css                          # Custom CSS styling
-│   ├── requirements.txt                   # App-specific dependencies
-│   │
-│   ├── data/                              # Application data files
-│   │   ├── Solar_Energy.xlsx
-│   │   ├── Total_Load.xlsx
-│   │   └── total_power_EV_disponible.xlsx
-│   │
-│   └── models/                            # Deployed model files
-│       ├── best_model_GRU_solar.h5
-│       ├── best_model_name_V2G_EV_energy_dispo.h5
-│       └── Load_Best_model_15.h5
-│
-├── README.md                              # Project documentation (this file&#39;s source)
-└── LICENSE.txt                            # MIT License
-</pre></div>
-</div>
-</section>
-<section id="simulation-details">
-<h2>Simulation Details<a class="headerlink" href="#simulation-details" title="Link to this heading"></a></h2>
-<p>Our project leverages deep learning techniques to model and forecast three critical components of the V2G ecosystem:</p>
-<section id="key-components">
-<h3>Key Components<a class="headerlink" href="#key-components" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><em>Load Forecasting:</em> Predicting residential electricity demand using RNN models</p></li>
-<li><p><em>Solar Energy Production:</em> Forecasting solar energy generation with BiLSTM/GRU models</p></li>
-<li><p><em>V2G Availability:</em> Modeling available power from electric vehicle fleets</p></li>
-</ul>
-</section>
-<section id="data-inputs">
-<h3>Data Inputs<a class="headerlink" href="#data-inputs" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><em>Solar Irradiance:</em> High-resolution measurements from Meknès region</p></li>
-<li><p><em>Residential Load:</em> Load profile data reflecting Moroccan consumption patterns</p></li>
-<li><p><em>EV Fleet Parameters:</em> Available power data from electric vehicles</p></li>
-</ul>
-</section>
-<section id="forecasting-outputs">
-<h3>Forecasting Outputs<a class="headerlink" href="#forecasting-outputs" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Total Residential Load (kW)</p></li>
-<li><p>Solar Energy Production (kW)</p></li>
-<li><p>Available V2G Power Capacity (kW)</p></li>
-<li><p>Cost Optimization Metrics (MAD/kWh)</p></li>
-</ul>
-</section>
-</section>
-<section id="running-the-application">
-<h2>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading"></a></h2>
-<section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Python 3.7+</p></li>
-<li><p>Git</p></li>
-</ul>
-</section>
-<section id="installation-steps">
-<h3>Installation Steps<a class="headerlink" href="#installation-steps" title="Link to this heading"></a></h3>
-<ol class="arabic">
-<li><p><em>Clone the repository:</em></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--filter<span class="o">=</span>blob:none<span class="w"> </span>--sparse<span class="w"> </span>https://github.com/MarouaneMajidi/Intelligent-Energy-Management-System-with-V2G-Technology.git
-<span class="nb">cd</span><span class="w"> </span>Intelligent-Energy-Management-System-with-V2G-Technology
-git<span class="w"> </span>sparse-checkout<span class="w"> </span>init<span class="w"> </span>--cone
-git<span class="w"> </span>sparse-checkout<span class="w"> </span><span class="nb">set</span><span class="w"> </span>App_version_one
-</pre></div>
-</div>
-</li>
-<li><p><em>Set up a Python virtual environment:</em></p>
+<section id="input-data">
+<h3>Input Data<a class="headerlink" href="#input-data" title="Link to this heading"></a></h3>
+<p>Our simulation required the following inputs:</p>
 <ul>
-<li><p><strong>Using `venv` (Python’s built-in)</strong>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</pre></div>
-</div>
-<p>Activate the environment:</p>
-<ul>
-<li><p>On Windows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<li><p><strong>Solar Irradiance</strong>:
+Collected from NASA’s POWER Data Access Viewer:  <a class="reference external" href="https://power.larc.nasa.gov/">https://power.larc.nasa.gov/</a></p>
+<p>This dataset provides reliable, global irradiance information and is particularly useful for regions like <strong>Meknès, Morocco</strong>, where we conducted our case study.</p>
+</li>
+<li><p><strong>Shading</strong>:
+Simulates the effect of clouds on solar irradiance throughout the day.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">simulate_shading</span><span class="p">(</span><span class="n">timestamp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Simulate shading factor based on the timestamp.</span>
+<span class="sd">        Returns a value between 0 (full shading) and 1 (no shading).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">timestamp</span><span class="o">.</span><span class="n">month</span>
+    <span class="n">hour</span> <span class="o">=</span> <span class="n">timestamp</span><span class="o">.</span><span class="n">hour</span>
+
+    <span class="c1"># Summer (June to September) - mostly no shading</span>
+    <span class="k">if</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="n">base_shading</span> <span class="o">=</span> <span class="mf">0.9</span> <span class="k">if</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;=</span> <span class="mi">18</span> <span class="k">else</span> <span class="mf">0.7</span>
+    <span class="c1"># Winter (November to February) - mostly shading</span>
+    <span class="k">elif</span> <span class="mi">11</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">base_shading</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="k">if</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;=</span> <span class="mi">18</span> <span class="k">else</span> <span class="mf">0.2</span>
+    <span class="c1"># Spring and Fall (March to May, October)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">base_shading</span> <span class="o">=</span> <span class="mf">0.7</span> <span class="k">if</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;=</span> <span class="mi">18</span> <span class="k">else</span> <span class="mf">0.5</span>
+
+    <span class="c1"># Introduce random fluctuation for each hour</span>
+    <span class="n">fluctuation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">shading_value</span> <span class="o">=</span> <span class="n">base_shading</span> <span class="o">+</span> <span class="n">fluctuation</span>
+    <span class="n">shading_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">shading_value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">shading_value</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
-<li><p>On macOS/Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<li><p><strong>Load Profiles</strong>:
+Generated using custom Python scripts that simulate residential demand based on Moroccan usage patterns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_load_profile</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">hour</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate synthetic load value for given datetime and hour&quot;&quot;&quot;</span>
+    <span class="c1"># Base daily pattern (evening peak at ~6:30 PM)</span>
+    <span class="k">if</span> <span class="n">date</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># Weekdays</span>
+        <span class="n">base_pattern</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">,</span> <span class="mf">0.07</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.40</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span>
+        <span class="mf">0.60</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.60</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span>
+        <span class="mf">0.70</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">]</span>
+
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Weekends (Friday &amp; Saturday)</span>
+        <span class="n">base_pattern</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.60</span><span class="p">,</span>
+        <span class="mf">0.70</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.70</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.80</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.90</span><span class="p">,</span> <span class="mf">0.92</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span>
+        <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.60</span><span class="p">,</span> <span class="mf">0.40</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">]</span>
+
+    <span class="c1"># Seasonal adjustment (winter = Nov-Feb)</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">month</span>
+    <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>  <span class="c1"># Winter</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">1.25</span>
+    <span class="k">elif</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>  <span class="c1"># Summer</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">0.85</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Shoulder seasons</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+    <span class="c1"># Get base value</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">base_pattern</span><span class="p">[</span><span class="n">hour</span><span class="p">]</span>
+
+    <span class="c1"># Apply seasonal multiplier</span>
+    <span class="n">value</span> <span class="o">*=</span> <span class="n">multiplier</span>
+
+    <span class="c1"># Add random fluctuation (±8%)</span>
+    <span class="n">value</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.92</span><span class="p">,</span> <span class="mf">1.08</span><span class="p">)</span>
+
+    <span class="c1"># Ensure value &lt; 1 and reasonable minimum</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="mf">0.99</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 </ul>
-</li>
-<li><p><strong>Using `conda` (Anaconda/Miniconda)</strong>:
-Replace <cite>myenv</cite> with your desired environment name and your preferred compatible version of python (3.1X).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>myenv<span class="w"> </span>python
-</pre></div>
-</div>
-<p>Activate the Conda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
-</pre></div>
-</div>
-</li>
-</ul>
-</li>
-<li><p><em>Install Streamlit app dependencies:</em></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>App_version_one
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</pre></div>
-</div>
-</li>
-<li><p><em>Launch the Streamlit application:</em></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>streamlit<span class="w"> </span>run<span class="w"> </span>app.py
-</pre></div>
-</div>
-</li>
-<li><p><em>Access the application:</em>
-Open your browser and navigate to <a class="reference external" href="http://localhost:8501">http://localhost:8501</a></p></li>
-</ol>
 </section>
-</section>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading"></a></h2>
-<p>This project draws inspiration from the “24-hour Simulation of a Vehicle-to-Grid (V2G) System” example provided by MathWorks. We extend our gratitude to MathWorks for providing this valuable conceptual foundation. The original simulation concept can be found <a class="reference external" href="https://www.mathworks.com/help/sps/ug/24-hour-simulation-of-a-vehicle-to-grid-v2g-system.html">here</a>.</p>
-<p>We also acknowledge the following resources that contributed to this project:
-- TensorFlow/Keras documentation for deep learning implementation
-- Streamlit documentation for web application development
-- Various academic papers on V2G optimization techniques</p>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
-<p>This project is licensed under the <a class="reference external" href="./LICENSE.txt">MIT License</a> - see the LICENSE.txt file for details.</p>
-</section>
-<section id="contact">
-<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading"></a></h2>
+<section id="output-data">
+<h3>Output Data<a class="headerlink" href="#output-data" title="Link to this heading"></a></h3>
+<p>Our simulation produces two key output time series:</p>
 <ul class="simple">
-<li><p><em>Sohaib Daoudi</em>
-- Email: <a class="reference external" href="mailto:soh&#46;daoudi&#37;&#52;&#48;gmail&#46;com">soh<span>&#46;</span>daoudi<span>&#64;</span>gmail<span>&#46;</span>com</a>
-- GitHub: <a class="reference external" href="https://github.com/sohaibdaoudi">&#64;sohaibdaoudi</a></p></li>
-<li><p><em>Marouane Majidi</em>
-- Email: <a class="reference external" href="mailto:majidi&#46;marouane0&#37;&#52;&#48;gmail&#46;com">majidi<span>&#46;</span>marouane0<span>&#64;</span>gmail<span>&#46;</span>com</a>
-- GitHub: <a class="reference external" href="https://github.com/marouanemajidi">&#64;marouanemajidi</a></p></li>
+<li><p><strong>Total Load</strong>:
+Represents the complete electricity demand profile, including both household consumption and vehicle charging requirements.</p></li>
+<li><p><strong>Solar Energy Production</strong>:
+Captures the amount of energy generated by the solar PV system over time, based on irradiance and shading factors.</p></li>
 </ul>
-<hr class="docutils" />
-<p align="center">
-  <em>Powering the future, one vehicle at a time.</em>
-</p></section>
+</section>
+</section>
+<section id="other-data">
+<h2>2. Other Data<a class="headerlink" href="#other-data" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Diesel Price (Weekly)</strong>:
+This data is sourced from
+<strong>U.S. Energy Information Administration (EIA)</strong>:
+<a class="reference external" href="https://www.eia.gov/opendata/">https://www.eia.gov/opendata/</a></p>
+<p>Provides diesel price data in <strong>USD per gallon</strong>. We use this data when Moroccan sources are unavailable or for comparative analysis.</p>
+<p>To convert this data into <strong>MAD per liter</strong>, we apply the following formula:</p>
+<div class="math notranslate nohighlight">
+\[\text{MAD_per_liter} = \text{USD_per_gallon} \times 0.26417205 \times 10\]</div>
+<ul class="simple">
+<li><p><cite>0.26417205</cite> is the conversion factor from gallons to liters</p></li>
+<li><p><cite>10</cite> is the approximate exchange rate used to convert USD to Moroccan Dirham (MAD)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="conclusion">
+<h2>3. Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>In summary, our data collection and simulation efforts result in four key time series that serve as the foundation for our energy management analysis:</p>
+<ul class="simple">
+<li><p><strong>Load</strong>: Total electricity demand, including residential and vehicle charging (MW).</p></li>
+<li><p><strong>Energy Available in EVs</strong>: The energy stored and potentially available in connected electric vehicles through the V2G system (MW).</p></li>
+<li><p><strong>Solar Energy</strong>: Energy generated by the solar PV system, influenced by irradiance and shading factors (MW).</p></li>
+<li><p><strong>Diesel Price</strong>: Weekly diesel prices in Moroccan Dirham per liter (DH/L).</p></li>
+</ul>
+<p>These time series provide comprehensive inputs and outputs for modeling, forecasting, and optimizing the local energy ecosystem.</p>
+</section>
+</section>
+<section id="iv-training-models">
+<h1>IV. Training Models<a class="headerlink" href="#iv-training-models" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All time series are processed through a pipeline that includes the following steps.
+Below, we describe the steps for the load time series as an example—other time series follow a similar process.</p>
+</div>
+<section id="data-preparation">
+<h2>1. Data Preparation<a class="headerlink" href="#data-preparation" title="Link to this heading"></a></h2>
+<p>The time series data comes from a simulation where time is represented in seconds (0, 3600, …, 18907200).
+We convert this to hourly timestamps starting from <code class="docutils literal notranslate"><span class="pre">2022-06-07</span> <span class="pre">00:00:00</span></code> and ending at <code class="docutils literal notranslate"><span class="pre">2023-01-11</span> <span class="pre">20:00:00</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cons_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">dir_path</span> <span class="o">+</span> <span class="s1">&#39;Total_Load.xlsx&#39;</span><span class="p">)</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2022-06-07 00:00:00&#39;</span><span class="p">)</span>
+<span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">start_date</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="statistical-approach">
+<h2>2. Statistical Approach<a class="headerlink" href="#statistical-approach" title="Link to this heading"></a></h2>
+<section id="stationarity-analysis">
+<h3>2.1. Stationarity Analysis<a class="headerlink" href="#stationarity-analysis" title="Link to this heading"></a></h3>
+<section id="visual-inspection">
+<h4>2.1.1. Visual Inspection<a class="headerlink" href="#visual-inspection" title="Link to this heading"></a></h4>
+<p>We plot the time series to visually check for stationarity.</p>
+<a class="reference internal image-reference" href="_images/Load_plot.png"><img alt="Consumption Time Series Plot" class="align-center" src="_images/Load_plot.png" style="width: 90%;" />
+</a>
+</section>
+<section id="augmented-dickey-fuller-test">
+<h4>2.1.2. Augmented Dickey-Fuller Test<a class="headerlink" href="#augmented-dickey-fuller-test" title="Link to this heading"></a></h4>
+<p>We apply the Augmented Dickey-Fuller (ADF) test to check for stationarity. The null hypothesis is that the time series is non-stationary.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.stattools</span><span class="w"> </span><span class="kn">import</span> <span class="n">adfuller</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">adfuller</span><span class="p">(</span><span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ADF Statistic: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="kwiatkowski-phillips-schmidt-shin-kpss-test">
+<h4>2.1.3. Kwiatkowski-Phillips-Schmidt-Shin (KPSS) Test<a class="headerlink" href="#kwiatkowski-phillips-schmidt-shin-kpss-test" title="Link to this heading"></a></h4>
+<p>The KPSS test checks for stationarity around a deterministic trend. The null hypothesis is that the time series is stationary.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.stattools</span><span class="w"> </span><span class="kn">import</span> <span class="n">kpss</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">kpss</span><span class="p">(</span><span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;KPSS Statistic: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="phillips-perron-pp-test">
+<h4>2.1.4. Phillips-Perron (PP) Test<a class="headerlink" href="#phillips-perron-pp-test" title="Link to this heading"></a></h4>
+<p>The PP test is another method to check for unit roots in the time series.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">arch.unitroot</span><span class="w"> </span><span class="kn">import</span> <span class="n">PhillipsPerron</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">PhillipsPerron</span><span class="p">(</span><span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PP Statistic: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="o">.</span><span class="n">stat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;P-value: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="differencing">
+<h3>2.2. Differencing<a class="headerlink" href="#differencing" title="Link to this heading"></a></h3>
+<p>If the time series is non-stationary, we apply differencing to make it stationary. We check the ADF test again after differencing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">consumption_diff</span> <span class="o">=</span> <span class="n">cons_df</span><span class="p">[</span><span class="s1">&#39;Load&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="sarima-model">
+<h3>2.3. SARIMA Model<a class="headerlink" href="#sarima-model" title="Link to this heading"></a></h3>
+<section id="initial-parameter-selection">
+<h4>2.3.1. Initial Parameter Selection<a class="headerlink" href="#initial-parameter-selection" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>ACF &amp; PACF Analysis</strong>: We plot the autocorrelation function (ACF) and partial autocorrelation function (PACF) to identify potential parameters for the SARIMA model.</p>
+<a class="reference internal image-reference" href="_images/acf_pacf.png"><img alt="ACF and PACF Plots" class="align-center" src="_images/acf_pacf.png" style="width: 90%;" />
+</a>
+</li>
+</ul>
+<p>Based on the ACF and PACF plots, we select the initial SARIMA parameters as follows:</p>
+<ul class="simple">
+<li><p><strong>d = 1</strong>: Chosen based on stationarity tests and the need for seasonal differencing.</p></li>
+<li><p><strong>p = 24</strong>: Indicated by significant spikes in the PACF plot, suggesting a seasonal autoregressive component.</p></li>
+<li><p><strong>q = 23</strong>: Derived from the ACF plot, which shows strong autocorrelations up to lag 23, followed by a sharp drop.</p></li>
+<li><p><strong>s = 24</strong>: Represents the seasonal period — 24 hours for daily seasonality in hourly data.</p></li>
+<li><p><strong>P = 1</strong>: The seasonal PACF reveals a spike at lag 24 and its multiples (e.g., 48), indicating a seasonal autoregressive pattern.</p></li>
+<li><p><strong>Q = 1</strong>: The seasonal ACF shows a peak at lag 24, which gradually decays, suggesting a seasonal moving average component.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.statespace.sarimax</span><span class="w"> </span><span class="kn">import</span> <span class="n">SARIMAX</span>
+
+<span class="c1"># Define SARIMA parameters</span>
+<span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">23</span>
+<span class="n">P</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">24</span>
+<span class="c1"># P = 0 to avoid the overlap of lags between the seasonal and non-seasonal components.</span>
+
+<span class="c1"># Fit the SARIMA model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SARIMAX</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">s</span><span class="p">))</span>
+<span class="n">model_fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="hyperparameter-tuning">
+<h4>2.3.2. Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Link to this heading"></a></h4>
+<p>To fine-tune the SARIMA model parameters, we use the <cite>pmdarima</cite> library’s <cite>auto_arima</cite> function. This helps identify the optimal combination of non-seasonal and seasonal parameters by minimizing the AIC score.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pmdarima</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pm</span>
+
+<span class="c1"># Initial parameter guesses</span>
+<span class="n">p</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>            <span class="c1"># Non-seasonal components</span>
+<span class="n">P</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">24</span>     <span class="c1"># Seasonal components</span>
+
+<span class="c1"># Perform automatic hyperparameter tuning</span>
+<span class="n">auto_model</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">auto_arima</span><span class="p">(</span>
+    <span class="n">train</span><span class="p">,</span>
+    <span class="n">seasonal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">s</span><span class="p">,</span>
+    <span class="n">start_p</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">start_q</span><span class="o">=</span><span class="n">q</span><span class="p">,</span> <span class="n">start_P</span><span class="o">=</span><span class="n">P</span><span class="p">,</span> <span class="n">start_Q</span><span class="o">=</span><span class="n">Q</span><span class="p">,</span>
+    <span class="n">max_p</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">max_q</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">max_P</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_Q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_D</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">d</span><span class="o">=</span><span class="n">d</span><span class="p">,</span>
+    <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">error_action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span>
+    <span class="n">suppress_warnings</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The tuning process identified the <strong>optimal SARIMA parameters</strong> that minimized the AIC:</p>
+<ul class="simple">
+<li><p><strong>(p, d, q) = (3, 0, 7)</strong></p></li>
+<li><p><strong>(P, D, Q, s) = (1, 1, 1, 24)</strong></p></li>
+</ul>
+<p>The model achieved the <strong>lowest AIC score</strong> of <strong>13406.305</strong> with these settings.</p>
+</section>
+</section>
+<section id="prophet-model">
+<h3>2.4. Prophet Model<a class="headerlink" href="#prophet-model" title="Link to this heading"></a></h3>
+<p>We use the <cite>Prophet</cite> library to model the time series, which is particularly effective for capturing seasonality and trends in time series data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">prophet</span><span class="w"> </span><span class="kn">import</span> <span class="n">Prophet</span>
+
+<span class="c1"># Prepare the data for Prophet</span>
+<span class="n">prophet_df</span> <span class="o">=</span> <span class="n">cons_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;ds&#39;</span><span class="p">,</span> <span class="s1">&#39;Load&#39;</span><span class="p">:</span> <span class="s1">&#39;y&#39;</span><span class="p">})</span>
+
+<span class="c1"># Initialize and fit the Prophet model</span>
+<span class="n">prophet_model</span> <span class="o">=</span> <span class="n">Prophet</span><span class="p">(</span>
+    <span class="n">daily_seasonality</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">yearly_seasonality</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">weekly_seasonality</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+<span class="n">prophet_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">prophet_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deep-learning-approach">
+<h2>3. Deep Learning Approach<a class="headerlink" href="#deep-learning-approach" title="Link to this heading"></a></h2>
+<section id="id3">
+<h3>3.1. Data Preparation<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>To train deep learning models such as LSTM or GRU, we first format the time series into sequences suitable for supervised learning.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_dataset</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">time_steps</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">Xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">serie</span><span class="p">)</span> <span class="o">-</span> <span class="n">time_steps</span><span class="p">):</span>
+        <span class="n">Xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">serie</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">:(</span><span class="n">i</span> <span class="o">+</span> <span class="n">time_steps</span><span class="p">)]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">serie</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">time_steps</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Xs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We also scale the data using <code class="docutils literal notranslate"><span class="pre">MinMaxScaler</span></code> to normalize the values between 0 and 1, which improves convergence and training stability for neural networks.</p>
+</section>
+<section id="models">
+<h3>3.2. Models<a class="headerlink" href="#models" title="Link to this heading"></a></h3>
+<p>We train various deep learning models, including LSTM, GRU, RNN, and Bidirectional LSTM, on the prepared data. Each model is evaluated using performance metrics such as RMSE and MAE.</p>
+<p>We use <cite>Keras Tuner</cite> to automatically search for the best hyperparameters.</p>
+<p><strong>Example: RNN Model with Keras Tuner and GPU Strategy</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">keras_tuner</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">kt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
+
+<span class="c1"># Enable GPU support with distributed strategy</span>
+<span class="n">strategy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">distribute</span><span class="o">.</span><span class="n">MirroredStrategy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of devices: </span><span class="si">{</span><span class="n">strategy</span><span class="o">.</span><span class="n">num_replicas_in_sync</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">model_builder_simpleRNN</span><span class="p">(</span><span class="n">hp</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+
+    <span class="c1"># Hyperparameter search space</span>
+    <span class="n">hp_units</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="s1">&#39;units&#39;</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+    <span class="n">hp_activation</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="s1">&#39;activation&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="s1">&#39;tanh&#39;</span><span class="p">])</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">SimpleRNN</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">hp_units</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">hp_activation</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">window_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+
+    <span class="n">hp_learning_rate</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1e-2</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">])</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">hp_learning_rate</span><span class="p">),</span>
+                  <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;mse&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">model</span>
+
+<span class="n">stop_early</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> <span class="n">patience</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Run the hyperparameter search within GPU scope</span>
+<span class="k">with</span> <span class="n">strategy</span><span class="o">.</span><span class="n">scope</span><span class="p">():</span>
+    <span class="n">tuner_simRNN</span> <span class="o">=</span> <span class="n">kt</span><span class="o">.</span><span class="n">Hyperband</span><span class="p">(</span>
+        <span class="n">model_builder_simpleRNN</span><span class="p">,</span>
+        <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span>
+        <span class="n">max_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">factor</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">directory</span><span class="o">=</span><span class="s1">&#39;my_dir&#39;</span><span class="p">,</span>
+        <span class="n">project_name</span><span class="o">=</span><span class="s1">&#39;simpleRNN&#39;</span>
+    <span class="p">)</span>
+
+<span class="n">tuner_simRNN</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">stop_early</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="model-evaluation">
+<h3>3.3. Model Evaluation<a class="headerlink" href="#model-evaluation" title="Link to this heading"></a></h3>
+<p>we evaluate the trained models on a test set using metrics such as Mean Squared Error (MSE), Mean Absolute Error (MAE), and R-squared (R²).
+we choose the best-performing model based on these metrics.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+
+<span class="n">mse_lstm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions_lstm</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mae_lstm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predictions_lstm</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="n">r2_lstm</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions_lstm</span><span class="p">)</span>
+
+<span class="n">mse_rnn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions_rnn</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mae_rnn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predictions_rnn</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="n">r2_rnn</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions_rnn</span><span class="p">)</span>
+
+<span class="n">mse_gru</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions_gru</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mae_gru</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predictions_gru</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="n">r2_gru</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions_gru</span><span class="p">)</span>
+
+
+<span class="n">mse_cnn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions_cnn</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mae_cnn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predictions_cnn</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="n">r2_cnn</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions_cnn</span><span class="p">)</span>
+
+<span class="n">mse_bi_lstm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">predictions_bi_lstm</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mae_bi_lstm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">predictions_bi_lstm</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="n">r2_bi_lstm</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predictions_bi_lstm</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/comparaison.png"><img alt="Model Comparison" class="align-center" src="_images/comparaison.png" style="width: 90%;" />
+</a>
+</section>
+</section>
+</section>
+<section id="v-optimisation">
+<h1>V. Optimisation<a class="headerlink" href="#v-optimisation" title="Link to this heading"></a></h1>
+<p>The optimization phase focuses on determining the optimal times to utilize V2G energy based on the predicted load and available energy from solar PV systems.
+The goal is to minimize electricity costs while ensuring grid stability.</p>
+<section id="optimization-problem-formulation">
+<h2>1. Optimization Problem Formulation<a class="headerlink" href="#optimization-problem-formulation" title="Link to this heading"></a></h2>
+<p><strong>Mathematical Formulation</strong></p>
+<p><strong>Objective:</strong> Minimize the total energy cost over a time horizon of <span class="math notranslate nohighlight">\(T\)</span> hours.</p>
+<div class="math notranslate nohighlight">
+\[\min_{d_t, v_t, s_t} \sum_{t=1}^{T} \left( d_t \cdot p_t^{\text{diesel}} + v_t \cdot p^{\text{v2g}} \right)\]</div>
+<p><strong>Subject to the following constraints:</strong></p>
+<div class="math notranslate nohighlight">
+\[\text{(1) Energy balance:} \quad s_t + v_t + d_t \geq L_t \quad \forall t = 1, \dots, T\]</div>
+<div class="math notranslate nohighlight">
+\[\text{(2) Solar availability:} \quad s_t \leq S_t \quad \forall t\]</div>
+<div class="math notranslate nohighlight">
+\[\text{(3) V2G availability:} \quad v_t \leq V_t \quad \forall t\]</div>
+<div class="math notranslate nohighlight">
+\[\text{(4) V2G binary activation:} \quad v_t \leq M \cdot b_t \quad \forall t\]</div>
+<div class="math notranslate nohighlight">
+\[\text{(5) Max V2G usage hours per day:} \quad \sum_{t \in \mathcal{D}_k} b_t \leq H_{\text{v2g}} \quad \forall \text{day } k\]</div>
+<div class="admonition-remark admonition">
+<p class="admonition-title">Remark</p>
+<p>Although some constraints (such as energy balance, solar availability, …) logically suggest an equality (i.e., total energy supplied equals total demand), we use a “greater than or equal to” (<span class="math notranslate nohighlight">\(\geq\)</span>) formulation.
+This provides numerical flexibility to the solver, avoids infeasibility due to rounding or prediction errors, and ensures better convergence when dealing with real-world uncertainties in the data.</p>
+</div>
+<p><strong>Variable Definitions:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span>: Total number of hours</p></li>
+<li><p><span class="math notranslate nohighlight">\(L_t\)</span>: Predicted load at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(S_t\)</span>: Predicted solar availability at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V_t\)</span>: Predicted V2G availability at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d_t\)</span>: Diesel energy used at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v_t\)</span>: V2G energy used at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(s_t\)</span>: Solar energy used at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p_t^{\text{diesel}}\)</span>: Diesel price at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(p^{\text{v2g}}\)</span>: Fixed price per unit of V2G energy</p></li>
+<li><p><span class="math notranslate nohighlight">\(b_t \in \{0,1\}\)</span>: Binary variable indicating whether V2G is used at hour <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span>: Large constant (big-M) used to link <span class="math notranslate nohighlight">\(v_t\)</span> and <span class="math notranslate nohighlight">\(b_t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{D}_k\)</span>: Set of hour indices in day <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(H_{\text{v2g}}\)</span>: Maximum number of hours per day where V2G can be used</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cvxpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">optimize_with_v2g</span><span class="p">(</span><span class="n">load_pred</span><span class="p">,</span> <span class="n">solar_pred</span><span class="p">,</span> <span class="n">v2g_pred</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">diesel_prices</span><span class="p">,</span> <span class="n">v2g_price</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">max_v2g_hours</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Optimize energy usage with V2G integration.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    load_pred : array-like</span>
+<span class="sd">        Predicted load values</span>
+<span class="sd">    solar_pred : array-like</span>
+<span class="sd">        Predicted solar generation values</span>
+<span class="sd">    v2g_pred : array-like</span>
+<span class="sd">        Predicted V2G availability values</span>
+<span class="sd">    hours : int</span>
+<span class="sd">        Number of hours to optimize</span>
+<span class="sd">    diesel_prices : array-like</span>
+<span class="sd">        Hourly diesel prices in MAD/MWh (can be constant or time-varying)</span>
+<span class="sd">    v2g_price : float</span>
+<span class="sd">        Price of V2G energy in MAD/MWh</span>
+<span class="sd">    max_v2g_hours : int</span>
+<span class="sd">        Maximum hours per day to use V2G</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    dict</span>
+<span class="sd">        Optimization results</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Decision variables</span>
+        <span class="n">solar_used</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">v2g_used</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">diesel_used</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">nonneg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Objective function: Minimize total cost with time-varying diesel prices</span>
+        <span class="n">total_cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">diesel_used</span><span class="p">,</span> <span class="n">diesel_prices</span><span class="p">))</span> <span class="o">+</span>
+                    <span class="n">cp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">v2g_used</span><span class="p">,</span> <span class="n">v2g_price</span><span class="p">)))</span>
+        <span class="n">objective</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Minimize</span><span class="p">(</span><span class="n">total_cost</span><span class="p">)</span>
+
+        <span class="c1"># Constraints</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hours</span><span class="p">):</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">solar_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">+</span> <span class="n">v2g_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">+</span> <span class="n">diesel_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">load_pred</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">solar_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">solar_pred</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v2g_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">v2g_pred</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+
+        <span class="c1"># V2G usage time constraint</span>
+        <span class="n">v2g_binary</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">boolean</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">M</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Big-M value</span>
+
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hours</span><span class="p">):</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v2g_used</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">v2g_binary</span><span class="p">[</span><span class="n">t</span><span class="p">])</span>
+
+        <span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="n">hours</span> <span class="o">+</span> <span class="mi">23</span><span class="p">)</span> <span class="o">//</span> <span class="mi">24</span>  <span class="c1"># Number of full or partial days</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">days</span><span class="p">):</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">d</span> <span class="o">*</span> <span class="mi">24</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="nb">min</span><span class="p">((</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span><span class="p">,</span> <span class="n">hours</span><span class="p">)</span>
+            <span class="n">constraints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">v2g_binary</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">max_v2g_hours</span><span class="p">)</span>
+
+        <span class="c1"># Solve the problem using a solver that supports mixed-integer programming</span>
+        <span class="n">problem</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Problem</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">constraints</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">solver</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cp</span><span class="o">.</span><span class="n">ECOS_BB</span><span class="p">,</span> <span class="n">cp</span><span class="o">.</span><span class="n">CBC</span><span class="p">,</span> <span class="n">cp</span><span class="o">.</span><span class="n">GLPK_MI</span><span class="p">]:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">solver</span> <span class="o">==</span> <span class="n">cp</span><span class="o">.</span><span class="n">ECOS_BB</span><span class="p">:</span>
+                    <span class="n">problem</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">,</span> <span class="n">abstol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">reltol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">feastol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">problem</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="n">solver</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">problem</span><span class="o">.</span><span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cp</span><span class="o">.</span><span class="n">OPTIMAL</span><span class="p">,</span> <span class="n">cp</span><span class="o">.</span><span class="n">OPTIMAL_INACCURATE</span><span class="p">]:</span>
+                    <span class="k">break</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">problem</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cp</span><span class="o">.</span><span class="n">OPTIMAL</span><span class="p">,</span> <span class="n">cp</span><span class="o">.</span><span class="n">OPTIMAL_INACCURATE</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Failed&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Problem status: </span><span class="si">{</span><span class="n">problem</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+        <span class="n">total_diesel_cost</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">diesel_used</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">diesel_prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hours</span><span class="p">)))</span>
+        <span class="n">total_v2g_energy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">v2g_used</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+        <span class="n">total_v2g_cost</span> <span class="o">=</span> <span class="n">total_v2g_energy</span> <span class="o">*</span> <span class="n">v2g_price</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Success&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;solar_used&#39;</span><span class="p">:</span> <span class="n">solar_used</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="s1">&#39;v2g_used&#39;</span><span class="p">:</span> <span class="n">v2g_used</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="s1">&#39;diesel_used&#39;</span><span class="p">:</span> <span class="n">diesel_used</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="s1">&#39;total_diesel_energy&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">diesel_used</span><span class="o">.</span><span class="n">value</span><span class="p">)),</span>
+            <span class="s1">&#39;total_diesel_cost&#39;</span><span class="p">:</span> <span class="n">total_diesel_cost</span><span class="p">,</span>
+            <span class="s1">&#39;total_v2g_energy&#39;</span><span class="p">:</span> <span class="n">total_v2g_energy</span><span class="p">,</span>
+            <span class="s1">&#39;total_v2g_cost&#39;</span><span class="p">:</span> <span class="n">total_v2g_cost</span><span class="p">,</span>
+            <span class="s1">&#39;total_cost&#39;</span><span class="p">:</span> <span class="n">total_diesel_cost</span> <span class="o">+</span> <span class="n">total_v2g_cost</span>
+        <span class="p">}</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Error&#39;</span><span class="p">,</span> <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)}</span>
+</pre></div>
+</div>
+</section>
+<section id="from-forecasting-to-optimization">
+<h2>2. From forecasting to optimization<a class="headerlink" href="#from-forecasting-to-optimization" title="Link to this heading"></a></h2>
+<section id="from-diesel-price-to-cost-energy">
+<h3>2.1. From diesel price to cost energy<a class="headerlink" href="#from-diesel-price-to-cost-energy" title="Link to this heading"></a></h3>
+<p>The first challenge is converting the diesel price into the cost of energy generated by the diesel generator.
+This calculation is based on the methodology from this paper:
+<a class="reference external" href="https://www.dpi.nsw.gov.au/__data/assets/pdf_file/0011/665660/comparing-running-costs-of-diesel-lpg-and-electrical-pumpsets.pdf">https://www.dpi.nsw.gov.au/__data/assets/pdf_file/0011/665660/comparing-running-costs-of-diesel-lpg-and-electrical-pumpsets.pdf</a></p>
+<p>The diesel generator’s cost per MWh is calculated using the formula:</p>
+<div class="math notranslate nohighlight">
+\[\text{Cost per MWh} = \left( \frac{\text{Cost per litre}}{\text{Specific energy}} \right) \times \left( \frac{1}{\text{Engine efficiency}} \right) \times \left( \frac{1}{0.278} \right) \times 1000\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><strong>specific_energy = 38 (MJ/litre)</strong></p></li>
+<li><p><strong>efficiency = 0.35  (35% engine efficiency)</strong></p></li>
+<li><p><strong>mj_to_kwh = 0.278  (1 MJ = 0.278 kWh)</strong></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">diesel_cost_per_mwh</span><span class="p">(</span><span class="n">prices_mad_per_liter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the cost per MWh (mechanical energy) from diesel prices (MAD per liter).</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    prices_mad_per_liter : np.ndarray or list</span>
+<span class="sd">        Diesel prices in MAD per liter.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    np.ndarray</span>
+<span class="sd">        Diesel costs in MAD per MWh.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constants</span>
+    <span class="n">specific_energy</span> <span class="o">=</span> <span class="mi">38</span>  <span class="c1"># MJ/litre</span>
+    <span class="n">efficiency</span> <span class="o">=</span> <span class="mf">0.35</span>     <span class="c1"># 35% engine efficiency</span>
+    <span class="n">mj_to_kwh</span> <span class="o">=</span> <span class="mf">0.278</span>     <span class="c1"># Conversion factor: 1 MJ = 0.278 kWh</span>
+
+    <span class="c1"># Compute cost per MWh</span>
+    <span class="n">cost_per_mwh</span> <span class="o">=</span> <span class="p">(</span><span class="n">prices_mad_per_liter</span> <span class="o">/</span> <span class="n">specific_energy</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">efficiency</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">mj_to_kwh</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
+
+    <span class="k">return</span> <span class="n">cost_per_mwh</span>
+</pre></div>
+</div>
+</section>
+<section id="from-weekly-to-hourly-diesel-energy-cost">
+<h3>2.2. From weekly to hourly diesel energy cost<a class="headerlink" href="#from-weekly-to-hourly-diesel-energy-cost" title="Link to this heading"></a></h3>
+<p>Our diesel prices are provided on a weekly basis, but our energy optimization requires hourly diesel costs.
+To address this, we map weekly diesel prices to hourly timestamps by assigning each hour the diesel price from the most recent week available.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">map_weekly_to_hourly_prices</span><span class="p">(</span><span class="n">hourly_dates</span><span class="p">,</span> <span class="n">diesel_prices</span><span class="p">,</span> <span class="n">diesel_dates</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Map weekly diesel prices to an hourly time series.</span>
+
+<span class="sd">    For each hourly timestamp, this function assigns the diesel price from the latest</span>
+<span class="sd">    weekly price date that is less than or equal to the hour&#39;s date.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    -----------</span>
+<span class="sd">    hourly_dates : pd.Series or array-like</span>
+<span class="sd">        Array of hourly timestamps (datetime).</span>
+<span class="sd">    diesel_prices : array-like</span>
+<span class="sd">        List or array of diesel prices corresponding to weekly intervals.</span>
+<span class="sd">    diesel_dates : pd.Series or array-like</span>
+<span class="sd">        Array of datetime objects indicating the start dates of weekly diesel prices.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    --------</span>
+<span class="sd">    np.ndarray</span>
+<span class="sd">        Array of diesel prices mapped to each hourly timestamp.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hourly_diesel_prices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hourly_dates</span><span class="p">))</span>
+
+    <span class="c1"># Ensure datetime format for consistency</span>
+    <span class="n">hourly_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">hourly_dates</span><span class="p">)</span>
+    <span class="n">diesel_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">diesel_dates</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">hour_date</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hourly_dates</span><span class="p">):</span>
+        <span class="c1"># Identify all diesel price dates that are less than or equal to the current hour</span>
+        <span class="n">valid_dates</span> <span class="o">=</span> <span class="n">diesel_dates</span> <span class="o">&lt;=</span> <span class="n">hour_date</span>
+
+        <span class="k">if</span> <span class="n">valid_dates</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+            <span class="c1"># Use the most recent diesel price available before or at this hour</span>
+            <span class="n">closest_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">valid_dates</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">hourly_diesel_prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">diesel_prices</span><span class="p">[</span><span class="n">closest_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># If no previous diesel price exists (e.g., very early dates), use the first available price</span>
+            <span class="n">hourly_diesel_prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">diesel_prices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">hourly_diesel_prices</span>
+</pre></div>
+</div>
+</section>
+<section id="example-of-optimization">
+<h3>2.3. Example of optimization<a class="headerlink" href="#example-of-optimization" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="_images/Optimisation_vis.png"><img alt="Optimization Example" class="align-center" src="_images/Optimisation_vis.png" style="width: 90%;" />
+</a>
+</section>
+</section>
+</section>
+<section id="vi-dashboard-with-streamlit">
+<h1>VI. Dashboard with Streamlit<a class="headerlink" href="#vi-dashboard-with-streamlit" title="Link to this heading"></a></h1>
+<p>To run the application (Dashboard), visit the GitHub repository:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/MarouaneMajidi/Intelligent-Energy-Management-System-with-V2G-Technology">https://github.com/MarouaneMajidi/Intelligent-Energy-Management-System-with-V2G-Technology</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sohaibdaoudi/V2G_TS_Project">https://github.com/sohaibdaoudi/V2G_TS_Project</a></p></li>
+</ul>
+<section id="main-workflow">
+<h2>Main Workflow<a class="headerlink" href="#main-workflow" title="Link to this heading"></a></h2>
+<p><strong>Step 1: Load Models and Set Parameters</strong></p>
+<p>Load the pre-trained models and historical data. Configure the parameters for optimization:</p>
+<ul class="simple">
+<li><p><strong>Forecast duration</strong>: Number of hours for forecasting load and solar energy.</p></li>
+<li><p><strong>Diesel price input</strong>: Choose between a time series or a constant value.</p></li>
+<li><p><strong>V2G price</strong>: Cost of V2G energy in MAD per MWh.</p></li>
+<li><p><strong>Maximum V2G hours</strong>: Maximum number of hours per day that V2G energy can be used.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/step1.png"><img alt="Step 1 - Set Parameters" class="align-center" src="_images/step1.png" style="width: 90%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Step 2: Run Optimization and View Results</strong></p>
+<p>Execute the optimization process and analyze the outcomes visually through interactive plots.</p>
+<a class="reference internal image-reference" href="_images/step2.png"><img alt="Step 2 - Optimization Results" class="align-center" src="_images/step2.png" style="width: 90%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="additional-features">
+<h2>Additional Features<a class="headerlink" href="#additional-features" title="Link to this heading"></a></h2>
+<p><strong>Download Energy Analysis Results</strong></p>
+<p>Export the energy cost and distribution results in CSV format for external analysis.</p>
+<a class="reference internal image-reference" href="_images/step3.png"><img alt="Download CSV Results" class="align-center" src="_images/step3.png" style="width: 90%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Download Summary Report</strong></p>
+<p>Generate and download a detailed energy optimization report in PDF or markdown format.</p>
+<a class="reference internal image-reference" href="_images/step4.png"><img alt="Download Report" class="align-center" src="_images/step4.png" style="width: 90%;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Retrain Models with Real-Time Data</strong></p>
+<p>The dashboard allows users to upload real-world operational data to retrain and update forecasting models.</p>
+<a class="reference internal image-reference" href="_images/step5.png"><img alt="Retrain Models" class="align-center" src="_images/step5.png" style="width: 90%;" />
+</a>
+</section>
 </section>
 
 
