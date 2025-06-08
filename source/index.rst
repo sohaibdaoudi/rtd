@@ -163,12 +163,12 @@ Our simulation produces two key output time series:
 
   To convert this data into **MAD per liter**, we apply the following formula:
 
-  .. math::
+    .. math::
 
-     \text{MAD_per_liter} = \text{USD_per_gallon} \times 0.26417205 \times 10
+        \text{MAD_per_liter} = \text{USD_per_gallon} \times 0.26417205 \times 10
 
-  - `0.26417205` is the conversion factor from gallons to liters  
-  - `10` is the approximate exchange rate used to convert USD to Moroccan Dirham (MAD)
+    - `0.26417205` is the conversion factor from gallons to liters.
+    - `10` is the approximate exchange rate used to convert USD to Moroccan Dirham (MAD).
 
 3. Conclusion
 -------------
