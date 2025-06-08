@@ -35,16 +35,16 @@ Supervisor
 ----------
 
 * **Masrour Tawfik**  
-  `LinkedIn <https://www.linkedin.com/in/tawfik-masrour-43163b85/>`_
+  `LinkedIn <https://www.linkedin.com/in/tawfik-masrour-43163b85/>`__
 
 Members
 -------
 
 * **Marouane Majidi**  
-  `LinkedIn <https://www.linkedin.com/in/marouane-majidi-73abb81ab/>`_
+  `LinkedIn <https://www.linkedin.com/in/marouane-majidi-73abb81ab/>`__
 
 * **Sohaib Daoudi**  
-  `LinkedIn <https://www.linkedin.com/in/sohaib-daoudi-61215426a/>`_
+  `LinkedIn <https://www.linkedin.com/in/sohaib-daoudi-61215426a/>`__
 
 III. Data Collection
 ====================
@@ -471,8 +471,6 @@ The goal is to minimize electricity costs while ensuring grid stability.
 1. Optimization Problem Formulation
 -----------------------------------
 
-V2G Energy Cost Optimization Problem
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Mathematical Formulation**
 
