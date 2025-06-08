@@ -6,17 +6,14 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'TimeSeriesProject'
-copyright = '2025, DAOUDI & MAJIDI'
-author = 'DAOUDI & MAJIDI'
+project = 'v2g'
+copyright = '2025, v2g project'
+author = 'Marouane Majidi & Sohaib Daoudi'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    'sphinx.ext.autosectionlabel',
-    'sphinx.ext.imgconverter'
-]
+extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -28,5 +25,3 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-
-
