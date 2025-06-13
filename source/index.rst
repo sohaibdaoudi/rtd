@@ -426,6 +426,16 @@ We use `Keras Tuner` to automatically search for the best hyperparameters.
 
     tuner_simRNN.search(X_train, y_train, epochs=50, validation_data=(X_val, y_val), callbacks=[stop_early])
 
+Loss Plot with Early Stopping
+
+.. image:: images/load_eval.png
+   :alt: Model loss evaluation graph
+   :align: center
+   :width: 80%
+   
+
+
+
 3.3. Model Evaluation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we evaluate the trained models on a test set using metrics such as Mean Squared Error (MSE), Mean Absolute Error (MAE), and R-squared (R²). 
@@ -799,3 +809,21 @@ The dashboard allows users to upload real-world operational data to retrain and 
    :alt: Retrain Models
    :align: center
    :width: 90%
+
+|
+
+VII. Future Enhancements
+=========================
+
+The project is not finished yet, we still have several enhancements planned to improve the system's performance and capabilities:
+
+- **Extended Data Collection**:  
+  Due to system limitations, particularly crashes caused by insufficient RAM during our customized MATLAB simulation, we were only able to collect **5,252 hours** of data. This amount is insufficient for the model to fully capture **yearly seasonality**.  
+  To address this, we plan to expand our dataset to cover **at least 17,520 hours (2 years)** of operational data. This larger timespan will allow the model to learn more accurate temporal patterns and seasonal behaviors.
+
+- **Real-World Dataset Integration**:  
+  Currently, our load consumption data is artificially generated, although it is based on realistic patterns observed in Morocco. Unfortunately, we could not find a publicly available real-world dataset that matches our required simulation duration. In future iterations, once such a dataset is found, we plan to fully replace the artificial load with **100% real-world data**.  
+  It is important to note that **all other data sources**, such as solar energy production and diesel price ..., are already based on real-world measurements.
+
+- **Inclusion of Wind Energy**:  
+  In the current version of the simulation, we excluded wind farm contributions due to complexity and computational constraints. In the future, we aim to **reintroduce wind energy production** into the system. This enhancement will align our work more closely with Morocco's national strategy to increase renewable energy integration and provide a more holistic analysis of hybrid energy systems.

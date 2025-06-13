@@ -106,6 +106,7 @@
 <li><a class="reference internal" href="#additional-features">Additional Features</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#vii-future-enhancements">VII. Future Enhancements</a></li>
 </ul>
 </div>
         </div>
@@ -505,6 +506,9 @@ We convert this to hourly timestamps starting from <code class="docutils literal
 <span class="n">tuner_simRNN</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">stop_early</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Loss Plot with Early Stopping</p>
+<a class="reference internal image-reference" href="_images/load_eval.png"><img alt="Model loss evaluation graph" class="align-center" src="_images/load_eval.png" style="width: 80%;" />
+</a>
 </section>
 <section id="model-evaluation">
 <h3>3.3. Model Evaluation<a class="headerlink" href="#model-evaluation" title="Link to this heading"></a></h3>
@@ -825,7 +829,24 @@ To address this, we map weekly diesel prices to hourly timestamps by assigning e
 <p>The dashboard allows users to upload real-world operational data to retrain and update forecasting models.</p>
 <a class="reference internal image-reference" href="_images/step5.png"><img alt="Retrain Models" class="align-center" src="_images/step5.png" style="width: 90%;" />
 </a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
+</section>
+<section id="vii-future-enhancements">
+<h1>VII. Future Enhancements<a class="headerlink" href="#vii-future-enhancements" title="Link to this heading"></a></h1>
+<p>The project is not finished yet, we still have several enhancements planned to improve the system’s performance and capabilities:</p>
+<ul class="simple">
+<li><p><strong>Extended Data Collection</strong>:
+Due to system limitations, particularly crashes caused by insufficient RAM during our customized MATLAB simulation, we were only able to collect <strong>5,252 hours</strong> of data. This amount is insufficient for the model to fully capture <strong>yearly seasonality</strong>.
+To address this, we plan to expand our dataset to cover <strong>at least 17,520 hours (2 years)</strong> of operational data. This larger timespan will allow the model to learn more accurate temporal patterns and seasonal behaviors.</p></li>
+<li><p><strong>Real-World Dataset Integration</strong>:
+Currently, our load consumption data is artificially generated, although it is based on realistic patterns observed in Morocco. Unfortunately, we could not find a publicly available real-world dataset that matches our required simulation duration. In future iterations, once such a dataset is found, we plan to fully replace the artificial load with <strong>100% real-world data</strong>.
+It is important to note that <strong>all other data sources</strong>, such as solar energy production and diesel price …, are already based on real-world measurements.</p></li>
+<li><p><strong>Inclusion of Wind Energy</strong>:
+In the current version of the simulation, we excluded wind farm contributions due to complexity and computational constraints. In the future, we aim to <strong>reintroduce wind energy production</strong> into the system. This enhancement will align our work more closely with Morocco’s national strategy to increase renewable energy integration and provide a more holistic analysis of hybrid energy systems.</p></li>
+</ul>
 </section>
 
 
