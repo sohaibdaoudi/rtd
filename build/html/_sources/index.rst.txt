@@ -812,7 +812,87 @@ The dashboard allows users to upload real-world operational data to retrain and 
 
 |
 
-VII. Future Enhancements
+VII. Installation
+======================
+
+
+
+1. Prerequisites
+----------------
+
+- Git
+- Python 3.XX (with `venv` module for creating virtual environments)
+- Anaconda (recommended for managing Python environments)
+
+
+2. Installation steps
+----------------------
+
+2.1 **Clone the repository:**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+   Use a sparse checkout to clone only the required application directory.
+
+   .. code-block:: bash
+
+      git clone --depth 1 --filter=blob:none --sparse https://github.com/sohaibdaoudi/V2G_TS_Project.git
+      cd V2G_TS_Project
+      git sparse-checkout init --cone
+      git sparse-checkout set App_V2
+
+
+.. note::
+
+    Instead of clonning, you can simply download the ZIP file of the whole project and extract it:
+    `V2G_TS_Project-main.zip <https://github.com/sohaibdaoudi/V2G_TS_Project/archive/refs/heads/main.zip>`_
+
+2.2 **Set up a virtual environment:**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   A virtual environment is recommended to manage dependencies.
+
+   - **Using venv (pip users):**
+
+     .. code-block:: bash
+
+        python3.10 -m venv venv
+        source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+   - **Using conda:**
+
+     .. code-block:: bash
+
+        conda create -n v2g_env python=3.10
+        conda activate v2g_env
+
+3. **Install Streamlit app dependencies:**
+------------------------------------------
+
+   Navigate to the application folder and install the required packages.
+
+   .. code-block:: bash
+
+      cd C:\PATH_TO_FOLDER\App_V2
+      pip install -r requirements.txt
+
+4. **Launch the Streamlit application:**
+----------------------------------------
+
+   Start the application using the Streamlit command.
+
+   .. code-block:: bash
+
+      streamlit run app.py
+
+5. **Access the application:**
+------------------------------
+
+   The application will launch in your browser automatically. If not, navigate to ``http://localhost:8501``.
+
+
+|
+
+VIII. Future Enhancements
 =========================
 
 The project is not finished yet, we still have several enhancements planned to improve the system's performance and capabilities:
@@ -827,3 +907,4 @@ The project is not finished yet, we still have several enhancements planned to i
 
 - **Inclusion of Wind Energy**:  
   In the current version of the simulation, we excluded wind farm contributions due to complexity and computational constraints. In the future, we aim to **reintroduce wind energy production** into the system. This enhancement will align our work more closely with Morocco's national strategy to increase renewable energy integration and provide a more holistic analysis of hybrid energy systems.
+
